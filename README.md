@@ -6,6 +6,10 @@
 </div>
 
 <br>
+<div align="center">
+  <img src="public/dashboard-preview.png" alt="IDSignal Dashboard Preview" width="800" />
+</div>
+<br>
 
 ## 🇬🇧 English
 
