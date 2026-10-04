@@ -18,11 +18,17 @@
 - **Explainable Priorities:** Calculates a risk score for each user based on active attacks and missing security controls, providing clear remediation steps.
 - **Live Interactive Dashboard:** A fast, modern UI to review threats and filter critical accounts instantly.
 
-### 📋 Prerequisites
+### 🔑 Microsoft 365 Requirements
+To initially connect IDSignal to your Microsoft 365 tenant, the user performing the setup needs **Global Administrator** or **Privileged Role Administrator** rights. This is only required once to create the App Registration and grant the following **read-only** API permissions:
+- `User.Read.All` (To map users and their status)
+- `UserAuthenticationMethod.Read.All` (To check MFA configurations)
+- `ActivityFeed.Read` (To ingest sign-in and audit logs)
+
+### 📋 Prerequisites & Tools
 Depending on how you choose to run IDSignal, you will need:
-- **For Docker users:** Docker installed on your host.
-- **For Local Native users:** [Node.js](https://nodejs.org/) (v24 or later).
-- **For Guided Auto-Setup:** Windows OS and [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli-windows) installed (to automatically configure the Azure App Registration).
+- **For Docker users:** [Download Docker Desktop](https://www.docker.com/products/docker-desktop/).
+- **For Local Native users:** [Download Node.js](https://nodejs.org/) (v24 or later).
+- **For Guided Auto-Setup:** Windows OS and [Download Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli-windows) (Required for the PowerShell script to automatically configure Azure App Registration).
 
 ### 🚀 Quick Start (Docker)
 The easiest way to run IDSignal is via Docker. Open your terminal and run:
@@ -54,11 +60,17 @@ Navigate to `http://localhost:4317` and follow the on-screen guided setup.
 - **Açıklanabilir Önceliklendirme:** Aktif saldırılar ve eksik güvenlik yapılandırmalarını baz alarak her kullanıcı için bir risk skoru hesaplar ve çözüm adımları sunar.
 - **Canlı ve Hızlı Arayüz:** Tehditleri incelemek ve hesapları filtrelemek için hızlı, modern bir kontrol paneli.
 
-### 📋 Gereksinimler (Prerequisites)
-Kullanım tercihinize göre şunlardan birine sahip olmalısınız:
-- **Docker kullanıcıları için:** Docker.
-- **Lokal (Yerel) Node.js kurulumu için:** [Node.js](https://nodejs.org/) (v24 veya üzeri).
-- **Otomatik Kurulum Sihirbazı için:** Windows işletim sistemi ve [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli-windows) aracının yüklü olması (Uygulamanın arka planda Azure API izinlerini kendi kendine yapabilmesi için gereklidir).
+### 🔑 Microsoft 365 Gereksinimleri
+IDSignal'ı Microsoft 365 sisteminize (Tenant) ilk kez bağlarken, kurulumu yapan kullanıcının **Global Administrator (Genel Yönetici)** veya **Privileged Role Administrator** yetkisine sahip olması gerekir. Bu yetki yalnızca bir kereye mahsus, uygulamanın (App Registration) arka planda şu **salt-okunur (read-only)** izinleri alabilmesi için kullanılır:
+- `User.Read.All` (Kullanıcı dizinini çekmek için)
+- `UserAuthenticationMethod.Read.All` (MFA durumlarını görmek için)
+- `ActivityFeed.Read` (Giriş loglarını yakalamak için)
+
+### 📋 Gerekli Programlar (Prerequisites)
+Kullanım tercihinize göre bilgisayarınızda şunlardan birinin kurulu olması gerekir:
+- **Docker kullanıcıları için:** [Docker Desktop İndir](https://www.docker.com/products/docker-desktop/).
+- **Lokal (Yerel) Node.js kurulumu için:** [Node.js İndir](https://nodejs.org/) (v24 veya üzeri).
+- **Otomatik Kurulum Sihirbazı için:** Windows işletim sistemi ve [Azure CLI İndir](https://learn.microsoft.com/cli/azure/install-azure-cli-windows) (Uygulamanın arka planda kendi kendine Azure ayarlarını yapabilmesi için zorunludur).
 
 ### 🚀 Hızlı Başlangıç (Docker)
 Kurulumun en pratik yolu Docker kullanmaktır:
