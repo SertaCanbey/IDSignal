@@ -2,7 +2,7 @@
   <img src="public/brand-logo.png" alt="IDSignal Logo" width="300" />
   <h1>IDSignal</h1>
   <p><b>Local, Privacy-First & Fast Microsoft Entra Security Analyzer</b></p>
-  <a href="https://idsignal.org">Live Demo & Official Website</a>
+  <a href="https://idsignal.org">Live Demo & Official Website</a> • <a href="https://www.linkedin.com/in/sertac-canbey/" target="_blank">LinkedIn</a>
 </div>
 
 <br>
