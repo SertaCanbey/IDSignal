@@ -1,0 +1,17 @@
+services:
+  identityradar:
+    build: .
+    ports:
+      - "127.0.0.1:4317:4317"
+    environment:
+      APP_ORIGIN: http://localhost:4317
+      DATA_DIR: /data
+    volumes:
+      - identityradar-data:/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  identityradar-data:

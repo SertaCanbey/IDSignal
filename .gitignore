@@ -1,0 +1,12 @@
+data/
+*.db*
+.env
+*.key
+*.pem
+*.log
+node_modules/
+.agents/skills/
+scratch-repo/
+update*.py
+backups/
+kaspersky-dislamalar.*
