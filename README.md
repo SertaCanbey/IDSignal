@@ -25,10 +25,18 @@ To initially connect IDSignal to your Microsoft 365 tenant, the user performing 
 - `ActivityFeed.Read` (To ingest sign-in and audit logs)
 
 ### 📋 Prerequisites & Tools
-Depending on how you choose to run IDSignal, you will need:
-- **For Docker users:** [Download Docker Desktop](https://www.docker.com/products/docker-desktop/).
-- **For Local Native users:** [Download Node.js](https://nodejs.org/) (v24 or later).
-- **For Guided Auto-Setup:** Windows OS and [Download Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli-windows) (Required for the PowerShell script to automatically configure Azure App Registration).
+Depending on how you choose to run IDSignal, you will need the corresponding tools. 
+
+**For Docker users:**
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+**For Local Native users (Windows):**
+You can quickly install both Node.js (v24+) and Azure CLI via PowerShell `winget`:
+```powershell
+winget install OpenJS.NodeJS.LTS
+winget install Microsoft.AzureCLI
+```
+*(Azure CLI is only required if you want to use the 1-click Guided Auto-Setup via the UI).*
 
 ### 🚀 Quick Start (Docker)
 The easiest way to run IDSignal is via Docker. Open your terminal and run:
@@ -67,10 +75,18 @@ IDSignal'ı Microsoft 365 sisteminize (Tenant) ilk kez bağlarken, kurulumu yapa
 - `ActivityFeed.Read` (Giriş loglarını yakalamak için)
 
 ### 📋 Gerekli Programlar (Prerequisites)
-Kullanım tercihinize göre bilgisayarınızda şunlardan birinin kurulu olması gerekir:
-- **Docker kullanıcıları için:** [Docker Desktop İndir](https://www.docker.com/products/docker-desktop/).
-- **Lokal (Yerel) Node.js kurulumu için:** [Node.js İndir](https://nodejs.org/) (v24 veya üzeri).
-- **Otomatik Kurulum Sihirbazı için:** Windows işletim sistemi ve [Azure CLI İndir](https://learn.microsoft.com/cli/azure/install-azure-cli-windows) (Uygulamanın arka planda kendi kendine Azure ayarlarını yapabilmesi için zorunludur).
+Kullanım tercihinize göre şunlardan biri kurulu olmalıdır:
+
+**Docker kullanıcıları için:**
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+**Lokal Kurulum Tercih Edenler (Windows) İçin:**
+Sisteminize Node.js ve Azure CLI kurmanın en hızlı yolu, PowerShell üzerinden şu iki kodu girmektir:
+```powershell
+winget install OpenJS.NodeJS.LTS
+winget install Microsoft.AzureCLI
+```
+*(Azure CLI kurulumu sadece arayüzdeki "Otomatik Sihirbazı" kullanarak API izni vermek istiyorsanız zorunludur).*
 
 ### 🚀 Hızlı Başlangıç (Docker)
 Kurulumun en pratik yolu Docker kullanmaktır:
